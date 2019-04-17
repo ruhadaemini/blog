@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Navbar from './components/layout/Navbar'
 import Dashboard from './components/dashboard/Dashboard';
-import BlogDetails from './components/blogs/BlogDetails';
+import ProjectDetails from './components/projects/ProjectDetails';
+import SignIn from './components/auth/SignIn';
+import SignUp from './components/auth/SignUp';
+import CreateBlog from './components/projects/CreateProject';
 
 class App extends Component {
   render() {
@@ -12,7 +15,10 @@ class App extends Component {
             <Navbar/>
             <Switch>
                 <Route exact path='/' component={Dashboard} />
-                <Route path='/blog/:id' component={BlogDetails} />
+                <Route path='/project/:id' component={ProjectDetails} />
+                <Route path='/signin' component={SignIn} />
+                <Route path='/signup' component={SignUp} />
+                <Route path='/create' component={CreateBlog} />
             </Switch>
           </div>
         </ BrowserRouter>
