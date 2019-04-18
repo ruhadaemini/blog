@@ -17,8 +17,9 @@ class CreateProject extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault()  //prevent the default action when the form gets submited
-        // console.log(this.state);
         this.props.createProject(this.state);
+        //redirect to blogs list after creating the blog
+        this.props.history.push('/');
     }
 
     render() {
