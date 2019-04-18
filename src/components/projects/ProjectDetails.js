@@ -9,6 +9,8 @@ const ProjectDetails = (props) => {
     const {project, auth} = props;
     if(!auth.uid) return <Redirect to='/signin' />
 
+
+
     if (project){
         return(
             <div className="container section blog-details">
@@ -31,6 +33,8 @@ const ProjectDetails = (props) => {
                         </div>
                     </div>
                 </div>
+
+
             </div>
         )
     }
