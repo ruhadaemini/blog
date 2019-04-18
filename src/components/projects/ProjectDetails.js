@@ -14,16 +14,23 @@ const ProjectDetails = (props) => {
     if (project){
         return(
             <div className="container section blog-details">
-                <div className="card z-depth-0">
-                    <div className="card-content">
-                    <span className="card-title">
-                        {project.title}
-                    </span>
-                        <p>{project.content}</p>
+                <div className="row">
+                    <div className="col s12 m12">
+                        <h1 className="dashboard-title">Single Page </h1>
                     </div>
-                    <div className="card-action lighten-4 grey-text">
-                        <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
-                        <div>{moment(project.createdAt.toDate().toString()).calendar()}</div>
+                    <div className="col s12 m12">
+                        <div className="card z-depth-0">
+                            <div className="card-content">
+                                <span className="card-title">
+                                    {project.title}
+                                </span>
+                                <p>{project.content}</p>
+                            </div>
+                            <div className="card-action lighten-4 grey-text">
+                                <div>Posted by: {project.authorFirstName} {project.authorLastName}</div>
+                                <div className="grey-text">{moment(project.createdAt.toDate().toString()).calendar()}</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

@@ -20,6 +20,18 @@ class App extends Component {
                 <Route path='/signup' component={SignUp} />
                 <Route path='/create' component={CreateBlog} />
             </Switch>
+              <ul className="bg-bubbles">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+              </ul>
           </div>
         </ BrowserRouter>
     );
