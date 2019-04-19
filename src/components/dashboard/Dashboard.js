@@ -14,9 +14,6 @@ class Dashboard extends Component {
         return(
             <div className="dashboard container">
                 <div className="row">
-                    {/*<div className="col s12 m12">*/}
-                        {/*<h1 className="dashboard-title">Dashboard </h1>*/}
-                    {/*</div>*/}
                     <div className="col s12 m9">
                         <ProjectList projects={projects}/>
                     </div>
@@ -43,6 +40,6 @@ export default compose(
     connect(mapStateToProps),
     firestoreConnect([
         {collection: 'projects', orderBy:['createdAt', 'desc']},
-        {collection: 'notifications', limit: 3, orderBy:['time', 'desc']}
+        {collection: 'notifications', limit: 3}
     ])
 )(Dashboard);
