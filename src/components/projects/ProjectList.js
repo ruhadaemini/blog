@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
 import ProjectSummary from './ProjectSummary';
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 
 class ProjectList extends Component {
     state = {
         currentPage: 0,
-        page_size: 3
+        page_size: 3,
+        filteredProjects: null
     };
 
     nextPage = () => {
-
-        if (this.state.currentPage < this.state.page_size-1) {
+        if (this.state.currentPage < this.state.page_size - 1) {
             this.setState({
                 currentPage: this.state.currentPage + 1
             })
@@ -18,7 +21,6 @@ class ProjectList extends Component {
     };
 
     prevPage = () => {
-
         if (this.state.currentPage > 0) {
             this.setState({
                 currentPage: this.state.currentPage - 1
@@ -26,18 +28,38 @@ class ProjectList extends Component {
         }
     };
 
-    goToPage = (number) => {
+    goToPage = (currentPage) => {
         this.setState({
-            currentPage: number
+            currentPage
         })
     };
 
-    render() {
-        let projects = this.props.projects;
-        let currentPage = this.state.currentPage;
-        let page_size = this.state.page_size;
+    static getDerivedStateFromProps = (props, state) => {
+        if (state.filteredProjects !== props.projects) {
+            return {
+                filteredProjects: state.filteredProjects || props.projects
+            }
+        }
 
-        let projects_items = projects && projects.slice(currentPage * page_size, (currentPage + 1) * page_size).map(project => {
+    };
+
+    handleSearch = (event) => {
+        let input_value = event.target.value;
+
+        this.setState({
+            search_parameter_value: input_value,
+            filteredProjects: this.props.projects.filter((project) => project.title.toUpperCase().includes(input_value.toUpperCase())).map( project => {
+                return project;
+            })
+        })
+
+    };
+
+    render() {
+
+        let {filteredProjects, page_size, currentPage} = this.state;
+
+        let projects_items = filteredProjects && filteredProjects.slice(currentPage * page_size, (currentPage + 1) * page_size).map(project => {
             return(
                 <>
                     <Link to={'/project/' + project.id} key={project.id}>
@@ -49,6 +71,8 @@ class ProjectList extends Component {
 
         return (
             <div className="blog-list section">
+                <input type="text" placeholder={'search products'} onChange={this.handleSearch} value={this.state.search_parameter_value}/>
+
                 {/*if we have blogs do this:*/}
                 {projects_items}
                 <nav aria-label="Page navigation example" className="pagination">
@@ -88,4 +112,16 @@ class ProjectList extends Component {
     }
 }
 
-export default ProjectList;
+const mapStateToProps = (state) => {
+    return{
+        projects: state.firestore.ordered.projects,
+        auth: state.firebase.auth
+    }
+}
+
+export default compose(
+    connect(mapStateToProps),
+    firestoreConnect([
+        {collection: 'projects', orderBy:['createdAt', 'desc']}
+    ])
+)(ProjectList);

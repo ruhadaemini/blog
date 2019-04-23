@@ -14,7 +14,8 @@ class CreateProject extends Component {
         this.setState({
             [e.target.id]: e.target.value
         })
-    }
+    };
+
     handleSubmit = (e) => {
         e.preventDefault()  //prevent the default action when the form gets submited
         this.props.createProject(this.state);
