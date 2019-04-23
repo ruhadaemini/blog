@@ -164,6 +164,7 @@ textarea.materialize-textarea:focus:not([readonly])
 nav ul a {
   text-transform: uppercase;
   cursor: pointer;
+  color: #fff;
 }
 .pink.lighten-1 {
   background-color: #ea93b0 !important;
@@ -237,3 +238,21 @@ h1.dashboard-title {
   color: #bc818c;
   cursor: pointer;
 }
+
+nav.pagination {
+  background: transparent;
+  border: 0;
+  box-shadow: 0px 0px;
+}
+ul.pagination button {
+  background-color: #ea93b0 !important;
+  box-shadow: 0px 0px;
+  border-radius: 0px 0px;
+  margin: 0px 5px;
+}
+ul.pagination button:hover {
+  color: #bd808c;
+  box-shadow: 0px 0px;
+  transition: all ease 0.5s;
+}
+a:hover{text-decoration: none;}

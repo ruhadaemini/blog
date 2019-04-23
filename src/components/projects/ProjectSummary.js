@@ -14,9 +14,7 @@ const ProjectSummary = (data) => {
                 <div className="bottom-text">
                     <p>Posted By: {project.authorFirstName} {project.authorLastName}</p>
                     <p className="grey-text">{moment(project.createdAt.toDate().toString()).calendar()}</p>
-                    <div className="read-more">
-                        +
-                    </div>
+                    <div className="read-more"> + </div>
                 </div>
             </div>
         </div>
