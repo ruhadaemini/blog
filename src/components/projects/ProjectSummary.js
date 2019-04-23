@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import {Link} from "react-router-dom";
 
 const ProjectSummary = (data) => {
     let project = data.project;
@@ -19,6 +18,6 @@ const ProjectSummary = (data) => {
             </div>
         </div>
     )
-}
+};
 
 export default ProjectSummary;

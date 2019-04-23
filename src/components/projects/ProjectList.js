@@ -40,19 +40,31 @@ class ProjectList extends Component {
                 filteredProjects: state.filteredProjects || props.projects
             }
         }
-
     };
 
     handleSearch = (event) => {
         let input_value = event.target.value;
 
         this.setState({
-            search_parameter_value: input_value,
-            filteredProjects: this.props.projects.filter((project) => project.title.toUpperCase().includes(input_value.toUpperCase())).map( project => {
+            filteredProjects: this.props.projects.filter( (project) => project.title.toUpperCase().includes(input_value.toUpperCase())).map( project => {
                 return project;
             })
         })
 
+    };
+
+    paginationNumbers = () => {
+        let numbers = [];
+        for (let i = 1 ; i < this.state.page_size+1; i++) {
+            numbers.push(
+                <li className="page-item">
+                    <button className="btn page-link" onClick={() => this.goToPage(i-1)}>
+                        {i}
+                    </button>
+                </li>
+            )
+        }
+        return numbers;
     };
 
     render() {
@@ -71,7 +83,7 @@ class ProjectList extends Component {
 
         return (
             <div className="blog-list section">
-                <input type="text" placeholder={'search products'} onChange={this.handleSearch} value={this.state.search_parameter_value}/>
+                <input type="text" placeholder={'search products'} onChange={this.handleSearch} />
 
                 {/*if we have blogs do this:*/}
                 {projects_items}
@@ -82,21 +94,9 @@ class ProjectList extends Component {
                                 Previous
                             </button>
                         </li>
-                        <li className="page-item">
-                            <button className="btn page-link" onClick={() => this.goToPage(0)}>
-                                1
-                            </button>
-                        </li>
-                        <li className="page-item">
-                            <button className="btn page-link" onClick={() => this.goToPage(1)}>
-                                2
-                            </button>
-                        </li>
-                        <li className="page-item">
-                            <button className="btn page-link" onClick={() => this.goToPage(2)}>
-                                3
-                            </button>
-                        </li>
+
+                        {this.paginationNumbers()}
+
                         <li className="page-item">
                             <button className="btn btn-link page-link" onClick={this.nextPage}>
                                 Next
@@ -106,7 +106,6 @@ class ProjectList extends Component {
                     <br/>
                     <p className="white-text">Page {currentPage+1} / {page_size}</p>
                 </nav>
-
             </div>
         );
     }
@@ -117,7 +116,7 @@ const mapStateToProps = (state) => {
         projects: state.firestore.ordered.projects,
         auth: state.firebase.auth
     }
-}
+};
 
 export default compose(
     connect(mapStateToProps),
