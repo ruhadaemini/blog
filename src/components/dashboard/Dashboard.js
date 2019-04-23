@@ -15,7 +15,7 @@ class Dashboard extends Component {
             <div className="dashboard container">
                 <div className="row">
                     <div className="col s12 m9">
-                        <ProjectList projects={projects}/>
+                        <ProjectList />
                     </div>
                     <div className="col s12 m3">
                         <Notifications notifications = {notifications}/>
@@ -28,7 +28,6 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return{
         projects: state.firestore.ordered.projects,
         auth: state.firebase.auth,
