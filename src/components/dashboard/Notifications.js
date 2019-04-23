@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const Notifications =(props) =>{
+const Notifications = (props) => {
     const {notifications} = props;
     return(
         <div className="section">
@@ -11,7 +11,7 @@ const Notifications =(props) =>{
                         Notifications
                     </span>
                     <ul className="notifications">
-                        {notifications && notifications.map(item => {
+                        { notifications && notifications.map(item => {
                             return (
                                 <li key={item.id}>
                                     <span className="pink-text">{item.user}</span>

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd79c8e0-7cf1-4786-93d4-5dc34989a8c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/CreateProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/CreateProject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/projects/ProjectList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/ProjectList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects/ProjectSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/ProjectSummary.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +29,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/projects/ProjectList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="60" column="86" selection-start-line="60" selection-start-column="86" selection-end-line="60" selection-end-column="86" />
+            <state relative-caret-position="390">
+              <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <marker date="1556013192459" expanded="true" signature="396:778" ph="..." />
-                <marker date="1556013192459" expanded="true" signature="396:879" ph="..." />
-                <marker date="1556013192459" expanded="true" signature="784:879" ph="..." />
+                <marker date="1556012165040" expanded="true" signature="396:778" ph="..." />
+                <marker date="1556012165040" expanded="true" signature="396:879" ph="..." />
+                <marker date="1556012165040" expanded="true" signature="784:879" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/projects/ProjectSummary.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,6 +119,7 @@
         <option value="$PROJECT_DIR$/src/store/actions/projectActions.js" />
         <option value="$PROJECT_DIR$/src/components/pagination/Pagination.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/components/projects/ProjectSummary.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/projects/ProjectDetails.js" />
@@ -114,7 +128,6 @@
         <option value="$PROJECT_DIR$/src/components/dashboard/Search.js" />
         <option value="$PROJECT_DIR$/src/components/projects/CreateProject.js" />
         <option value="$PROJECT_DIR$/src/components/dashboard/Dashboard.js" />
-        <option value="$PROJECT_DIR$/src/components/projects/ProjectSummary.js" />
         <option value="$PROJECT_DIR$/src/components/projects/ProjectList.js" />
       </list>
     </option>
@@ -212,7 +225,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78623000" />
+    <option name="totallyTimeSpent" value="77625000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -571,6 +584,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/projects/ProjectSummary.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard/Dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -581,32 +604,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/projects/ProjectSummary.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/block.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="248" column="16" selection-start-line="248" selection-start-column="16" selection-end-line="248" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/projects/ProjectList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="60" column="86" selection-start-line="60" selection-start-column="86" selection-end-line="60" selection-end-column="86" />
+        <state relative-caret-position="390">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1556013192459" expanded="true" signature="396:778" ph="..." />
-            <marker date="1556013192459" expanded="true" signature="396:879" ph="..." />
-            <marker date="1556013192459" expanded="true" signature="784:879" ph="..." />
+            <marker date="1556012165040" expanded="true" signature="396:778" ph="..." />
+            <marker date="1556012165040" expanded="true" signature="396:879" ph="..." />
+            <marker date="1556012165040" expanded="true" signature="784:879" ph="..." />
           </folding>
         </state>
       </provider>
