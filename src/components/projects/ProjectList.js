@@ -83,7 +83,7 @@ class ProjectList extends Component {
 
         return (
             <div className="blog-list section">
-                <input type="text" placeholder={'search products'} onChange={this.handleSearch} />
+                <input type="text" placeholder={'Search blogs ...'} onChange={this.handleSearch} />
 
                 {/*if we have blogs do this:*/}
                 {projects_items}
