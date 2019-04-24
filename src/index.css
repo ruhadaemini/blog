@@ -211,7 +211,7 @@ h1.dashboard-title {
 .card-notification {
   /*min-height: 100vh;*/
   height: 735px;
-  background: #ffffff80;
+  background: #ffffff;
 }
 .card-notification .card-title {
   color: #fff;
@@ -219,6 +219,7 @@ h1.dashboard-title {
 }
 .card .card-content .card-title {
   font-weight: 500;
+  color: #333;
 }
 .bottom-text {
   position: absolute;
