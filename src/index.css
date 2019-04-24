@@ -211,7 +211,7 @@ h1.dashboard-title {
 .card-notification {
   /*min-height: 100vh;*/
   height: 735px;
-  background: #9e9e9e;
+  background: #ffffff80;
 }
 .card-notification .card-title {
   color: #fff;
