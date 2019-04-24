@@ -39,10 +39,7 @@ class CreateProject extends Component {
                         <label htmlFor="content">Blog Content</label>
                         <textarea id="content" rows="20" cols={"20"} className="materialize-textarea" onChange={this.handleChange}/>
                     </div>
-                    <div className="input-field">
-                        <label htmlFor="tags">Tag</label>
-                        <input type="text" id={"tags"} onChange={this.handleChange}/>
-                    </div>
+
 
                     <div className="input-field">
                         <button className="btn pink lighten-1 z-depth-0">Save</button>
